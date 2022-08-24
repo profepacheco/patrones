@@ -2,24 +2,18 @@ package co.edu.javeriana.ejemplo;
 
 import java.util.Date;
 
-public class Estudiante {
+public class Animales {
 
-    private int id;
 
     private String nombre;
 
+    private Integer nroDePatas;
+
     private Date estampa;
 
-    protected Estudiante(){
-
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    protected Animales(String nombre, Integer nroDePatas) {
+        this.nombre = nombre;
+        this.nroDePatas = nroDePatas;
     }
 
     public String getNombre() {
@@ -28,6 +22,14 @@ public class Estudiante {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public Integer getNroDePatas() {
+        return nroDePatas;
+    }
+
+    public void setNroDePatas(Integer nroDePatas) {
+        this.nroDePatas = nroDePatas;
     }
 
     public Date getEstampa() {

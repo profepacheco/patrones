@@ -1,21 +1,21 @@
 package co.edu.javeriana.principal;
 
-import co.edu.javeriana.ejemplo.Estudiante;
-import co.edu.javeriana.ejemplo.Profesores;
-import co.edu.javeriana.ejemplo.ProfesoresFactory;
-import co.edu.javeriana.zooligicos.Animal;
-import co.edu.javeriana.zooligicos.Gato;
-import co.edu.javeriana.zooligicos.Perro;
-
-import java.util.ArrayList;
-import java.util.List;
+import co.edu.javeriana.ejemplo.AbstractFactory;
+import co.edu.javeriana.ejemplo.FabricaEntidadProvider;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Animal perro = new Perro() ;
-        Animal gato = new Gato();
+        AbstractFactory estudiante = FabricaEntidadProvider
+                .getFactory(FabricaEntidadProvider.ESTUDIANTES);
+
+        System.out.println(estudiante.crearEntidad());
+
+        AbstractFactory animal = FabricaEntidadProvider
+                .getFactory(FabricaEntidadProvider.ANIMALES);
+
+        System.out.println(animal.crearEntidad());
     }
 
 }
