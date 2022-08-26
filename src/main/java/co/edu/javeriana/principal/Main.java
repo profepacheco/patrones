@@ -1,6 +1,7 @@
 package co.edu.javeriana.principal;
 
 import co.edu.javeriana.ejemplo.AbstractFactory;
+import co.edu.javeriana.ejemplo.Animales;
 import co.edu.javeriana.ejemplo.FabricaEntidadProvider;
 
 public class Main {
@@ -15,7 +16,11 @@ public class Main {
         AbstractFactory animal = FabricaEntidadProvider
                 .getFactory(FabricaEntidadProvider.ANIMALES);
 
-        System.out.println(animal.crearEntidad());
+        Animales animales = (Animales) animal.crearEntidad();
+        Animales copia = animales.copiar();
+
+
+        System.out.println(copia);
     }
 
 }
