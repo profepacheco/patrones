@@ -6,7 +6,6 @@ import java.util.Date;
 
 public class Animales {
 
-
     private String nombre;
 
     private Integer nroDePatas;

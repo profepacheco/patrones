@@ -8,7 +8,15 @@ public class RutaReparto {
 
     Oficina oficina;
     List<Carta> cartaList;
+    boolean isCompleted;
 
+    public boolean isCompleted() {
+        return isCompleted;
+    }
+
+    public void setCompleted(boolean completed) {
+        isCompleted = completed;
+    }
 
     public Oficina getOficina() {
         return oficina;
